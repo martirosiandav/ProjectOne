@@ -1,0 +1,190 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+/*NAVIGATION*/
+div.nav li a {
+    color: #2b4664;
+    font-weight: bold;
+}
+.container {
+    margin: 0 10%;
+}
+.navbar {
+    background-color: #2b4664;
+    opacity: .9;
+    z-index: 3;
+}
+.navbar li a{
+    position: relative;
+    text-decoration: none;
+    color: #fff !important;
+    font-weight: bold;
+    transition: all 0.7s;
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -o-transition: all 0.7s;
+}
+.navbar li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #44d7c9;
+    visibility: hidden;
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+.navbar li a:hover {
+    color: #44d7c9 !important;
+}
+.navbar li a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -o-transform: scaleX(1);
+}
+.dropdown-toggle::after {
+    display: none !important;
+}
+button {
+    color: #fff;
+    padding: 15px 30px;
+    border: 2px solid #44d7c9;
+    border-radius: 5px !important;
+    background: none;
+    font-weight: bold;
+}
+ul.navbar-nav {
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+div.dropdown-menu {
+    background-color: #2b4664;
+    z-index: 3;
+    border: none;
+}
+a.dropdown-item:hover {
+    background: none;
+}
+/*VIDEO*/
+.my-video {
+    margin-top: 1400px;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+/*MAIN*/
+div.main {
+    z-index: 2;
+    position: relative;
+    color: #44d7c9;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-between;
+    overflow: hidden;
+}
+div.main p.second-p button {
+    font-size: 20px;
+    color: #ffffff;
+    border: none;
+    background-color: #42c5bc;
+    padding: 30px 80px;
+    border-radius: 5px;
+}
+div.main p.second-p button a {
+    position: relative;
+    text-decoration: none;
+}
+div.main p.second-p button a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    visibility: hidden;
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+div.main p.second-p button a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -o-transform: scaleX(1);
+}
+div.home {
+    position: fixed;
+    top:50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+div.main > p.first-p {
+    transform: translateX(-420px);
+    transition: all 500ms ease;
+}
+div.main > p.second-p {
+    transform: translateX(-400px);
+    transition: all 500ms ease;
+}
+::selection {
+    background: none;
+}
+.transform {
+    transition: all 375ms ease;
+    -webkit-transition: all 375ms ease;
+    -moz-transition: all 375ms ease;
+    -o-transition: all 375ms ease;
+}
+@media (max-width: 650px) {
+    div.main > p.first-p{
+        font-size: 50px;
+    }
+    div.main > p.second-p > button {
+        font-size: 18px;
+        padding: 25px 60px;
+    }
+}
+@media (max-width: 450px) {
+    div.main > p.first-p{
+        font-size: 40px;
+    }
+    div.main >  p.second-p > button {
+        font-size: 16px;
+        padding: 20px 30px;
+
+    }
+}
